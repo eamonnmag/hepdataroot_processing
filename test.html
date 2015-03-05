@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Read a ROOT file</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; text/html">
+
+    <script type="text/javascript" src="assets/jsroot/scripts/JSRootCore.js"></script>
+    <script type="text/javascript" src="assets/jsroot/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/jsroot/scripts/rawinflate.js"></script>
+    <script type="text/javascript" src="assets/jsroot/scripts/JSRootIOEvolution.js"></script>
+    <script type="text/javascript" src="assets/jsroot/scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/jsroot/scripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="assets/jsroot/scripts/JSRootPainter.js"></script>
+
+    <script type="text/javascript" src="assets/jsroot/scripts/JSRootInterface.js"></script>
+
+    <script type="text/javascript" src="assets/jsroot/scripts/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="assets/jsroot/scripts/three.min.js"></script>
+    <script type="text/javascript" src="assets/jsroot/scripts/helvetiker_regular.typeface.js"></script>
+    <script type="text/javascript" src="assets/jsroot/scripts/helvetiker_bold.typeface.js"></script>
+    <script type="text/javascript" src="assets/jsroot/scripts/JSRoot3DPainter.js"></script>
+
+    <script type="text/javascript" src="assets/js/bootstrap-filesystem.js"></script>
+
+    <script type="text/javascript" src="assets/js/hepdata_root.js"></script>
+
+    <link href="assets/style/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/jsroot/style/root_viewer.css">
+    <link rel="stylesheet" href="assets/hep_base.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="top-bar">
+
+    <div class="content">
+        <div class="pull-left hep_logo"></div>
+
+        <div class="pull-left">
+            <form class="top-search-form" action="search">
+                <input type="text" name="value" placeholder="Search HEP Data">
+                <button type="submit" class="submit">Search</button>
+            </form>
+        </div>
+
+        <div class="pull-right login" style="margin-left: 20px; margin-top: 1.2em; font-size: 1.3em">
+            <span class="fa fa-power-off"></span>
+        </div>
+
+        <div class="pull-right login">
+            <span class="username">laura <span class="fa fa-user" style="margin-left: 10px"></span> </span>
+            <!--<span class="fa fa-power-off"></span>-->
+        </div>
+
+        <div class="pull-right menu">
+            <ul>
+                <li><a href="explore"><span class="fa fa-arrow-up"></span> Submit</a></li>
+                <li><a href="help"><span class="fa fa-question-circle"></span> Help</a></li>
+
+            </ul>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="clearfix"></div>
+
+<div class="hep_breadcrumbs">
+    <ul>
+        <li class="active"><span class="fa fa-arrow-up"></span> Submit Data</li>
+    </ul>
+</div>
+
+<div class="hep_content">
+    <div class="root_upload_form" align="center">
+        <img src="assets/img/root_logo.svg" width="70px"/>
+        <h4>Upload a ROOT file</h4>
+
+
+        <div class="info">
+            <p>This file should contain <span class="color-highlight">all</span> of your plots. We will parse these
+                plots out for you along with metadata
+                that should conform to these <a href="/submission/guidelines" target="_blank">guidelines</a>.</p>
+        </div>
+
+        <input type="file" class="filestyle" id="root_file_upload" data-iconName="fa fa-upload">
+
+        <br/>
+        <br/>
+        <button onclick="JavaScript:HEPDataROOT.functions.process_file();" class="btn btn-primary btn-lg">Upload and
+            process
+        </button>
+
+        <div id="file_contents"></div>
+
+
+        <div id="canvas" style="width: 400px; height: 400px;">
+
+        </div>
+    </div>
+</div>
+
+<div class="footer-bar">
+
+    <div id="footer-decor">
+        <ul>
+            <li class="bg-blue-1">&nbsp;</li>
+            <li class="bg-blue-2">&nbsp;</li>
+            <li class="bg-blue-3">Copyright 1970-Present, HEP Data | Powered by Invenio</li>
+        </ul>
+    </div>
+
+    <div id="footer-buttons">
+        <ul>
+            <li class="bg-blue-1"><span class="fa fa-info-circle"></span> About</li>
+            <li class="bg-blue-2"><span class="fa fa-users"></span> Team</li>
+            <li class="bg-blue-3">Contact</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+
+<script>
+
+
+    $(":file").filestyle({iconName: "fa fa-upload", buttonName: "btn-primary"});
+</script>
+</html>

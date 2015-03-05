@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+}
+
+.hep_logo {
+    display: inline-block;
+    background: url("img/hepdata_logo.svg") no-repeat 0 5px;
+    width: 190px;
+    height: 50px;
+    background-size: 100%;
+}
+
+.top-bar {
+    background-color: #ECF0F1;
+    height: 65px;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login {
+    margin-right: 10px;
+    font-size: 1.1em;
+    font-weight: bolder;
+    text-transform: lowercase;
+    margin-top: 1.3em;
+    color: #894B9D;
+}
+
+.login .username {
+    color: #894B9D;
+}
+
+.top-search-form {
+    margin-left: 50px;
+    margin-top: 1.2em;
+}
+
+.top-search-form input {
+    font-size: .9em;
+    border: 1px solid white;
+    margin-left: -8px;
+    color: #fff;
+    background: white url("img/search_icon.png") no-repeat 5px 50%;
+    padding: 5px 6px 5px 25px;
+}
+
+.submit {
+    background-color: #894B9D;
+    border: none;
+    font-size: .9em;
+    padding: 5px 10px;
+    color: #fff;
+    margin-left: -3px;
+}
+
+.submit:hover {
+    background-color: #955BA5;
+}
+
+.menu {
+    margin-left: -20px;
+    font-size: 1.1em;
+}
+
+.menu ul {
+    list-style: none;
+
+    margin-top: 1.3em;
+}
+
+.menu ul li {
+    float: left;
+    margin-right: 30px;
+}
+
+.menu ul li a {
+    color: #894B9D;
+}
+
+.hep_breadcrumbs {
+    position: fixed;
+
+    margin-top: 65px;
+    height: 40px;
+    width: 100%;
+    background-color: #2C3E50;
+}
+
+.hep_breadcrumbs ul {
+    list-style: none;
+    margin: 0;
+    height: 40px;
+    -webkit-padding-start: 0px;
+}
+
+.hep_breadcrumbs ul li {
+    float: left;
+    display: inline;
+    color: white;
+    height: 100%;
+    padding: 10px;
+
+}
+
+.hep_breadcrumbs ul li.active {
+    background-color: #894B9D;
+}
+
+/*root upload form*/
+.root_upload_form {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    padding-top: 19em;
+}
+
+/* Footer properties */
+.footer-bar {
+    background-color: #894B9D;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    vertical-align: middle;
+}
+
+#footer-decor {
+    margin-left: -40px;
+    float: left;
+}
+
+#footer-buttons {
+    float: right;
+}
+
+.footer-bar ul {
+
+    list-style: none;
+    color: #fff;
+}
+
+.footer-bar ul li {
+    float: left;
+    padding: 10px;
+}
+
+.footer-bar ul li:hover {
+    border-top: solid 2px #F6F6F6;
+    cursor: pointer;
+}
+
+.bg-blue-1 {
+    background-color: #894B9D;
+}
+
+.bg-blue-2 {
+    background-color: #955BA5;
+}
+
+.bg-blue-3 {
+    background-color: #894B9D;
+}
+
+/**
+ Buttons overridden for colour change
+**/
+.btn-primary {
+    background-color: #894B9D;
+    border-color: #894B9D;
+}
+
+.btn-primary:hover {
+    background-color: #955BA5;
+    border-color: #955BA5;
+}
