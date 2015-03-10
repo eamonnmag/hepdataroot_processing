@@ -3,7 +3,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Read a ROOT file</title>
+    <title>HEP Data</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge; text/html">
 
     <script type="text/javascript" src="assets/jsroot/scripts/JSRootCore.js"></script>
@@ -33,19 +33,10 @@
 </head>
 <body>
 
-<div class="top-bar">
+<div class="top-bar" style="background-color: white">
 
     <div class="content">
-        <a href="search.html">
-            <div class="pull-left hep_logo"></div>
-        </a>
 
-        <div class="pull-left">
-            <form class="top-search-form" action="search">
-                <input type="text" name="value" placeholder="Search HEP Data">
-                <button type="submit" class="submit">Search</button>
-            </form>
-        </div>
 
         <div class="pull-right login" style="margin-left: 20px; margin-top: 1.2em; font-size: 1.3em">
             <span class="fa fa-power-off"></span>
@@ -71,60 +62,42 @@
 
 <div class="clearfix"></div>
 
-<div class="hep_breadcrumbs">
-    <ul>
-        <li class="active"><span class="fa fa-arrow-up"></span> Submit Data</li>
-    </ul>
+
+<div class="search-main" align="center">
+
+    <div class="hep_logo_big"></div>
+
+    <form class="main-search-form" action="search">
+        <input type="text" name="value" placeholder="Search HEP Data">
+        <button type="submit" class="submit">Search</button>
+    </form>
+
+    <p class="search-examples">example queries - <a href="">re gamma gamma%</a>, <a href="">exp cern</a></p>
+
 </div>
 
-<div class="hep-content">
-    <div class="root_upload_form" align="center">
-        <img src="assets/img/root_logo.svg" width="70px"/>
-        <h4>Upload a ROOT file</h4>
+<div class="clearfix"></div>
+
+<!--<div class="latest-info">-->
+
+    <!--<div class="pull-left latest-submissions">-->
+
+    <!--</div>-->
+
+    <!--<div class="pull-right latest-reviews">-->
+
+    <!--</div>-->
+<!--</div>-->
+
+<div class="footer-bar home-page-footer" align="center">
 
 
-        <div class="info">
-            <p>This file should contain <span class="color-highlight">all</span> of your plots. We will parse these
-                plots out for you along with metadata
-                that should conform to these <a href="/submission/guidelines" target="_blank">guidelines</a>.</p>
-        </div>
+    <p>Copyright 1970-Present, HEP Data | Powered by Invenio</p>
 
-        <input type="file" class="filestyle" id="root_file_upload" data-iconName="fa fa-upload">
+    <p><a href=""><span class="fa fa-info-circle"></span> About</a> | <a href=""><span class="fa fa-users"></span> Team</a> | <a href="">Contact</a>
+    </p>
 
-        <br/>
-        <br/>
-        <button onclick="JavaScript:HEPDataROOT.functions.process_file();" class="btn btn-primary btn-lg">Upload and
-            process
-        </button>
 
-    </div>
-
-    <div class="clearfix"></div>
-    <br/>
-
-    <div id="canvas">
-
-    </div>
-    <div class="clearfix"></div>
-</div>
-
-<div class="footer-bar">
-
-    <div id="footer-decor">
-        <ul>
-            <li class="bg-purple-1">&nbsp;</li>
-            <li class="bg-purple-2">&nbsp;</li>
-            <li class="bg-purple-3">Copyright 1970-Present, HEP Data | Powered by Invenio</li>
-        </ul>
-    </div>
-
-    <div id="footer-buttons">
-        <ul>
-            <li class="bg-purple-1"><span class="fa fa-info-circle"></span> About</li>
-            <li class="bg-purple-2"><span class="fa fa-users"></span> Team</li>
-            <li class="bg-purple-3">Contact</li>
-        </ul>
-    </div>
 </div>
 
 </body>

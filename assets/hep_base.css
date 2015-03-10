@@ -10,6 +10,14 @@ body {
     background-size: 100%;
 }
 
+.hep_logo_big{
+    display: inline-block;
+    background: url("img/hepdata_logo.svg") no-repeat 0 5px;
+    width: 240px;
+    height: 80px;
+    background-size: 100%;
+}
+
 .top-bar {
     background-color: #ECF0F1;
     height: 65px;
@@ -41,13 +49,19 @@ body {
     margin-top: 1.2em;
 }
 
-.top-search-form input {
+.top-search-form input, .main-search-form input{
     font-size: .9em;
     border: 1px solid white;
     margin-left: -8px;
-    color: #fff;
+    color: #2C3E50;
     background: white url("img/search_icon.png") no-repeat 5px 50%;
     padding: 5px 6px 5px 25px;
+}
+
+.main-search-form input {
+    background-color: #ECF0F1;
+    width: 240px;
+    padding: 8px 9px 7px 25px;
 }
 
 .submit {
@@ -61,6 +75,12 @@ body {
 
 .submit:hover {
     background-color: #955BA5;
+}
+
+.main-search-form .submit {
+    font-size: 1em;
+    padding: 6px 15px;
+    margin-left: -5px;
 }
 
 .menu {
@@ -117,7 +137,7 @@ body {
     width: 500px;
     height: 500px;
     margin: 0 auto;
-    padding-top: 19em;
+    padding-top: 16em;
 }
 
 /* Footer properties */
@@ -155,15 +175,15 @@ body {
     cursor: pointer;
 }
 
-.bg-blue-1 {
+.bg-purple-1 {
     background-color: #894B9D;
 }
 
-.bg-blue-2 {
+.bg-purple-2 {
     background-color: #955BA5;
 }
 
-.bg-blue-3 {
+.bg-purple-3 {
     background-color: #894B9D;
 }
 
@@ -175,7 +195,89 @@ body {
     border-color: #894B9D;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:active {
     background-color: #955BA5;
     border-color: #955BA5;
+}
+
+
+
+
+.hep-content {
+    width: 95%;
+    height: 100%;
+}
+/**
+    Plots
+**/
+
+#canvas {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2em;
+}
+
+.plot-container {
+    display: inline-block;
+    float: left;
+    width: 30%;
+    min-width: 350px;
+    height: 330px;
+    padding: 10px;
+    border: #ECF0F1 2px solid;
+    border-radius: 3px;
+    margin: 1.5%;
+}
+
+.plot-container h4 {
+
+}
+
+.plot-container .description {
+
+}
+
+.plot-container .data-table {
+
+}
+
+.search-main {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 16em;
+}
+
+.search-examples {
+    padding-top: 10px;
+    font-size: .9em;
+    color: #7F8C8D;
+}
+
+.search-examples a {
+    color: #955BA5;
+}
+
+.latest-info {
+    margin-top: 6em;
+    background-color: #ECF0F1;
+    height: 260px;
+}
+
+.home-page-footer {
+    background-color: white;
+    color: #955BA5;
+    height: 60px;
+}
+
+.home-page-footer p {
+    color: #2C3E50;
+}
+
+.home-page-footer a {
+    color: #955BA5;
+}
+
+.home-page-footer #footer-decor {
+    margin-left: 10px;
+    /*margin-left: 10px;*/
 }

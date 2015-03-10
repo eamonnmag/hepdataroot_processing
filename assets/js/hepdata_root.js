@@ -22,7 +22,7 @@ HEPDataROOT.functions = {
                 $('#fileContentHeader').removeClass("hidden");
                 loadedFile = evt.target.result;
 
-                $('#file_contents').html(evt.target.result);
+                //$('#file_contents').html(evt.target.result);
                 $('#proceedButton').removeClass('hidden');
 
                 HEPDataROOT.functions.process_root(loadedFile);
@@ -34,16 +34,33 @@ HEPDataROOT.functions = {
     },
 
     process_root: function (file_contents) {
-        var filename = "https://root.cern.ch/js/files/hsimple.root";
         JSROOT.source_min = true;
         JSROOT.source_dir = "assets/jsroot/";
+        var file_contents = "https://root.cern.ch/js/files/hsimple.root";
+        var ignore = ["ntuple", "StreamerInfo"];
+        var f = new JSROOT.TFile(file_contents, function (file) {
 
-        alert(file_contents);
-        var f = new JSROOT.TFile(filename, function (file) {
-            alert(file);
-            file.ReadObject("hprof;1", function (obj) {
-                JSROOT.draw("canvas", obj, "colz");
-            });
+
+            for (var key in file.fKeys) {
+                if (ignore.indexOf(file.fKeys[key].fName) == -1) {
+
+                    $("#canvas").append(
+                        '<div class="plot-container">' +
+                            '<h4 id="' + file.fKeys[key].fName + '-title"></h4>' +
+                            '<div id="' + file.fKeys[key].fName + '"></div>' +
+                            '<p id="' + file.fKeys[key].fName + '-description"></p>' +
+                        '</div>'
+                    );
+
+                    var plot_key = file.fKeys[key].fName + ";1";
+                    file.ReadObject(plot_key, function (obj) {
+                        console.log(obj)
+                        JSROOT.draw(obj.fName, obj, "colz");
+                        $("#" + obj.fName + "-title").text(obj.fName);
+                        $("#" + obj.fName + "-description").text(obj.fTitle);
+                    });
+                }
+            }
         });
     }
 }
